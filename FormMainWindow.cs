@@ -96,7 +96,7 @@ namespace SnakeTheGame
         /// </summary>
         private void LoadTopScoreList()
         {
-            using (Stream stream = File.Open(@"TopScoreTable.bin", FileMode.Open))
+            using (Stream stream = File.Open(@"..\\..\\TopScoreTable.bin", FileMode.Open))
             {
                 var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 topScoreList = (List<HighScore>)bformatter.Deserialize(stream);
